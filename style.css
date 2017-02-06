@@ -1,0 +1,39 @@
+/*
+* @Author: zhuxy
+* @Date:   2017-02-06 19:39:03
+* @Last Modified by:   zhuxy
+* @Last Modified time: 2017-02-06 21:24:32
+*/
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin:0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url(https://momentumdash.com/backgrounds/14.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.mode-one{
+    display: none;
+}
+
+.mode-two{
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.mode-two .item{
+    text-align: center;
+    color:#fff;
+    font-size:2em;
+}
+
+.mode-two .item strong{
+    font-size:3em;
+}
