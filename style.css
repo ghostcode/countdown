@@ -2,7 +2,7 @@
 * @Author: zhuxy
 * @Date:   2017-02-06 19:39:03
 * @Last Modified by:   zhuxy
-* @Last Modified time: 2017-02-06 21:24:32
+* @Last Modified time: 2017-02-08 09:37:23
 */
 html{
     height: 100%;
@@ -24,11 +24,13 @@ body{
 .mode-two{
     height:100%;
     display: flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
 }
 
 .mode-two .item{
+    margin-bottom: 2em;
     text-align: center;
     color:#fff;
     font-size:2em;
