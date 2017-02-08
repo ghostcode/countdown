@@ -2,20 +2,26 @@
 * @Author: zhuxy
 * @Date:   2017-02-06 20:16:56
 * @Last Modified by:   zhuxy
-* @Last Modified time: 2017-02-08 09:35:06
+* @Last Modified time: 2017-02-08 10:11:40
 */
 
 'use strict';
 
-function getElement(selector){
-    return document.querySelector(selector);
+let Utils = {
+    getElement(selector){
+        return document.querySelector(selector);
+    },
+    timePad(time){
+        return time < 10 ? '0' + time : time;
+    }
 }
 
-let $Yday = getElement('.j-year-day');
-let $Yhour = getElement('.j-year-hour');
-let $Dh = getElement('.j-day-h');
-let $Dm = getElement('.j-day-m');
-let $Ds = getElement('.j-day-s');
+let $Yday = Utils.getElement('.j-year-day');
+let $Yhour = Utils.getElement('.j-year-hour');
+let $Dh = Utils.getElement('.j-day-h');
+let $Dm = Utils.getElement('.j-day-m');
+let $Ds = Utils.getElement('.j-day-s');
+let $CurrentTime = Utils.getElement('.j-time');
 
 let date = new Date()
 let year = date.getFullYear();
@@ -42,6 +48,23 @@ let dateEndS = new Date(year,11,31,23,59,59).getTime();
 
     setTimeout(countDown,1000);
 })();
+
+(function countDownCurrentTime(){
+    let nowTime = new Date();
+    let h = nowTime.getHours();
+    let m = nowTime.getMinutes();
+    let s = nowTime.getSeconds();
+
+    h = Utils.timePad(h);
+    m = Utils.timePad(m);
+    s = Utils.timePad(s);
+
+    let nowTimeStr = `${h}:${m}:${s}`;
+
+    $CurrentTime.textContent = nowTimeStr;
+
+    setTimeout(countDownCurrentTime,1000);
+}())
 
 // ===============================
 
