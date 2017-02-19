@@ -2,7 +2,7 @@
 * @Author: zhuxy
 * @Date:   2017-02-06 19:39:03
 * @Last Modified by:   zhuxy
-* @Last Modified time: 2017-02-08 09:37:23
+* @Last Modified time: 2017-02-19 14:25:36
 */
 html{
     height: 100%;
@@ -11,15 +11,80 @@ body{
     height: 100%;
     margin:0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-image: url(https://momentumdash.com/backgrounds/14.jpg);
+    background-image: url(./mac.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .mode-one{
-    display: none;
+    display: flex;
+    justify-content:space-around;
 }
+
+.mode-one .month{
+    position: relative;
+    color:#fff;
+}
+.mode-one .month:after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    color: #fe6052;
+}
+.mode-one .month:nth-child(1):after{
+    content: "1"
+}
+.mode-one .month:nth-child(2):after{
+    content: "2"
+}
+.mode-one .month:nth-child(3):after{
+    content: "3"
+}
+.mode-one .month:nth-child(4):after{
+    content: "4"
+}
+.mode-one .month:nth-child(5):after{
+    content: "5"
+}
+.mode-one .month:nth-child(6):after{
+    content: "6"
+}
+.mode-one .month:nth-child(7):after{
+    content: "7"
+}
+.mode-one .month:nth-child(8):after{
+    content: "8"
+}
+.mode-one .month:nth-child(9):after{
+    content: "9"
+}
+.mode-one .month:nth-child(10):after{
+    content: "10"
+}
+.mode-one .month:nth-child(11):after{
+    content: "11"
+}
+.mode-one .month:nth-child(12):after{
+    content: "12"
+}
+
+
+.mode-one .month .item{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(0,0,0,.5);
+    position: relative;
+    z-index: 2
+}
+
+// mode-two
 
 .mode-two{
     height:100%;
