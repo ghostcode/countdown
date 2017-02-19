@@ -2,7 +2,7 @@
 * @Author: zhuxy
 * @Date:   2017-02-06 20:16:56
 * @Last Modified by:   zhuxy
-* @Last Modified time: 2017-02-19 12:54:36
+* @Last Modified time: 2017-02-19 14:58:05
 */
 
 'use strict';
@@ -25,6 +25,8 @@ let $CurrentTime = Utils.getElement('.j-time');
 
 let date = new Date()
 let year = date.getFullYear();
+let thisMonth = date.getMonth();
+let thisDay = date.getDate();
 
 let dayS = 24*60*60;
 
@@ -100,7 +102,12 @@ for(let month = 0; month <=11; month++){
     }
 
     for(;date <= dayInMonth;date++){
-        dayStr += '<div class="item">' + date + '</div>';
+        if(month == thisMonth && date == thisDay){
+            dayStr += '<div class="item active">' + date + '</div>';
+        }else{
+            dayStr += '<div class="item ">' + date + '</div>';
+        }
+        
         weekday++
 
         if(weekday%7 == 0){
